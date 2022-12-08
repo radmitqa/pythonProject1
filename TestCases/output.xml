@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221208 12:30:35.070" rpa="false" schemaversion="3">
+<suite id="s1" name="TC 601 Post Request" source="C:\Users\558\PycharmProjects\pythonProject1\TestCases\TC_601_Post_Request.robot">
+<test id="s1-t1" name="TC_601_End_to_End_Test_Case" line="10">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>Add_New_Student</arg>
+<arg>${base_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221208 12:30:35.279" level="INFO">Creating Session using : alias=Add_New_Student, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221208 12:30:35.279" endtime="20221208 12:30:35.280"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{body}</var>
+<arg>email=2@1.net</arg>
+<arg>password=Pass123</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221208 12:30:35.281" level="INFO">&amp;{body} = { email=2@1.net | password=Pass123 }</msg>
+<status status="PASS" starttime="20221208 12:30:35.280" endtime="20221208 12:30:35.281"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221208 12:30:35.282" level="INFO">&amp;{header} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20221208 12:30:35.281" endtime="20221208 12:30:35.282"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>Add_New_Student</arg>
+<arg>/api/register</arg>
+<arg>data=&amp;{body}</arg>
+<arg>headers=&amp;{header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20221208 12:30:35.282" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20221208 12:30:35.596" level="INFO">POST Request : url=https://reqres.in/api/register 
+ path_url=/api/register 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '43'} 
+ body={"email": "2@1.net", "password": "Pass123"} 
+ </msg>
+<msg timestamp="20221208 12:30:35.596" level="INFO">POST Response : url=https://reqres.in/api/register 
+ status=400, reason=Bad Request 
+ headers={'Date': 'Thu, 08 Dec 2022 11:30:35 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '57', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"39-6jrJxn+7f+pQUhbPgNMst7tagpA"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=fXiA2ombvCbtF3lDGXin%2BjMcgHEX19%2BA1EJ20tH7p8gNRKZ34633eA%2Bb6mCAI6gDxLDTkxqnZMnOCDju3Lxq%2BhGNdNAMUbEzHZ48zJCdraBOcpoCCan95WUiFA%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '77652b7b9b9db018-BEG'} 
+ body={"error":"Note: Only defined users succeed registration"} 
+ </msg>
+<msg timestamp="20221208 12:30:35.596" level="INFO">C:\Python310\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20221208 12:30:35.597" level="INFO">${response} = &lt;Response [400]&gt;</msg>
+<status status="PASS" starttime="20221208 12:30:35.282" endtime="20221208 12:30:35.597"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221208 12:30:35.597" endtime="20221208 12:30:35.598"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${response_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221208 12:30:35.600" level="INFO">${response_code} = 400</msg>
+<status status="PASS" starttime="20221208 12:30:35.599" endtime="20221208 12:30:35.600"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${response_code}</arg>
+<arg>201</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20221208 12:30:35.601" level="FAIL">400 != 201</msg>
+<status status="FAIL" starttime="20221208 12:30:35.600" endtime="20221208 12:30:35.601"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20221208 12:30:35.602" endtime="20221208 12:30:35.602"/>
+</kw>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20221208 12:30:35.277" endtime="20221208 12:30:35.603">400 != 201</status>
+</test>
+<status status="FAIL" starttime="20221208 12:30:35.072" endtime="20221208 12:30:35.605"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TC 601 Post Request">TC 601 Post Request</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221208 12:30:35.282" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+</errors>
+</robot>

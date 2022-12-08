@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221206 09:54:20.864" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCases" source="C:\Users\558\PycharmProjects\pythonProject1\TestCases">
+<suite id="s1-s1" name="TC 001 Get Request" source="C:\Users\558\PycharmProjects\pythonProject1\TestCases\TC_001_Get_Request.robot">
+<test id="s1-s1-t1" name="TC_001_Get_Request_All_Students" line="10">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>Get_Student_Details</arg>
+<arg>${Base_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221206 09:54:21.116" level="INFO">Creating Session using : alias=Get_Student_Details, url=http://thetestingworldapi.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221206 09:54:21.115" endtime="20221206 09:54:21.117"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>Get_Student_Details</arg>
+<arg>api/studentsDetails</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20221206 09:54:22.923" level="INFO">GET Request : url=http://thetestingworldapi.com/api/studentsDetails (redirected) 
+ path_url=/api/studentsDetails 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20221206 09:54:22.923" level="INFO">GET Response : url=https://thetestingworldapi.com/api/studentsDetails 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Server': 'Microsoft-IIS/8.5', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Tue, 06 Dec 2022 08:54:23 GMT', 'Content-Length': '11098'} 
+ body=[{"id":3945087,"first_name":"Fname6","middle_name":"Mname6","last_name":"Lname6","date_of_birth":"12/12/1990"},{"id":3945086,"first_name":"Fname5","middle_name":"Mname5","last_name":"Lname5","date_of_birth":"12/12/1990"},{"id":3945085,"first_name":"Fname4","middle_name":"Mname4","last_name":"Lname4","date_of_birth":"12/12/1990"},{"id":3945084,"first_name":"Fname3","middle_name":"Mname3","last_name":"Lname3","date_of_birth":"12/12/1990"},{"id":3945083,"first_name":"Fname2","middle_name":"Mname2","last_name":"Lname2","date_of_birth":"12/12/1990"},{"id":3945082,"first_name":"Fname1","middle_name":"Mname1","last_name":"Lname1","date_of_birth":"12/12/1990"},{"id":3945081,"first_name":"Fname6","middle_name":"Mname6","last_name":"Lname6","date_of_birth":"12/12/1990"},{"id":3945080,"first_name":"Fname6","middle_name":"Mname6","last_name":"Lname6","date_of_birth":"12/12/1990"},{"id":3945079,"first_name":"Fname6","middle_name":"Mname6","last_name":"Lname6","date_of_birth":"12/12/1990"},{"id":3945078,"first_name":"Fname6","middle_name":"Mname6","last_name":"Lname6","date_of_birth":"12/12/1990"},{"id":3945077,"first_name":"Fname6","middle_name":"Mname6","last_name":"Lname6","date_of_birth":"12/12/1990"},{"id":3945076,"first_name":"Fname6","middle_name":"Mname6","last_name":"Lname6","date_of_birth":"12/12/1990"},{"id":3945075,"first_name":"Fname5","middle_name":"Mname5","last_name":"Lname5","date_of_birth":"12/12/1990"},{"id":3945074,"first_name":"Fname4","middle_name":"Mname4","last_name":"Lname4","date_of_birth":"12/12/1990"},{"id":3945073,"first_name":"Fname3","middle_name":"Mname3","last_name":"Lname3","date_of_birth":"12/12/1990"},{"id":3945072,"first_name":"Fname2","middle_name":"Mname2","last_name":"Lname2","date_of_birth":"12/12/1990"},{"id":3945071,"first_name":"Fname1","middle_name":"Mname1","last_name":"Lname1","date_of_birth":"12/12/1990"},{"id":3945070,"first_name":"Fname5","middle_name":"Mname5","last_name":"Lname5","date_of_birth":"12/12/1990"},{"id":3945069,"first_name":"Thomas","middle_name":"","last_name":"White","date_of_birth":"20/01/2010"},{"id":3945068,"first_name":"Joseph","middle_name":"Middle","last_name":"Thompson","date_of_birth":"19/01/2010"},{"id":3945067,"first_name":"Charles","middle_name":"Middle","last_name":"Jackson","date_of_birth":"18/01/2010"},{"id":3945066,"first_name":"Richard","middle_name":"Middle","last_name":"Martin","date_of_birth":"17/01/2010"},{"id":3945065,"first_name":"David","middle_name":"Middle","last_name":"Moore","date_of_birth":"16/01/2010"},{"id":3945064,"first_name":"William","middle_name":"Middle","last_name":"Hernandez","date_of_birth":"15/01/2010"},{"id":3945063,"first_name":"Michael","middle_name":"Middle","last_name":"Thomas","date_of_birth":"14/01/2010"},{"id":3945062,"first_name":"Robert","middle_name":"Middle","last_name":"Taylor","date_of_birth":"13/01/2010"},{"id":3945061,"first_name":"John","middle_name":"Middle","last_name":"Anderson","date_of_birth":"12/01/2010"},{"id":3945060,"first_name":"James","middle_name":"Middle","last_name":"Martinez","date_of_birth":"11/01/2010"},{"id":3945059,"first_name":"Dorothy","middle_name":"","last_name":"Wilson","date_of_birth":"10/01/2010"},{"id":3945058,"first_name":"Margaret","middle_name":"Middle","last_name":"Rodriguez","date_of_birth":"09/01/2010"},{"id":3945057,"first_name":"Susan","middle_name":"Middle","last_name":"Garcia","date_of_birth":"08/01/2010"},{"id":3945056,"first_name":"Maria","middle_name":"Middle","last_name":"Davis","date_of_birth":"07/01/2010"},{"id":3945055,"first_name":"Jennifer","middle_name":"Middle","last_name":"Miller","date_of_birth":"06/01/2010"},{"id":3945054,"first_name":"Elizabeth","middle_name":"Middle","last_name":"Jones","date_of_birth":"05/01/2010"},{"id":3945053,"first_name":"Barbara","middle_name":"Middle","last_name":"Brown","date_of_birth":"04/01/2010"},{"id":3945052,"first_name":"Linda","middle_name":"Middle","last_name":"Williams","date_of_birth":"03/01/2010"},{"id":3945051,"first_name":"Patricia","middle_name":"Middle","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945050,"first_name":"Mary","middle_name":"Middle","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945049,"first_name":"Patricia","middle_name":"Middle","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945048,"first_name":"Mary","middle_name":"Middle","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945047,"first_name":"Patricia","middle_name":"Middle","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945046,"first_name":"Mary","middle_name":"Middle","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945045,"first_name":"Patricia","middle_name":"Middle","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945044,"first_name":"Mary","middle_name":"Middle","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945043,"first_name":"FirstName","middle_name":"MiddleName","last_name":"LastName","date_of_birth":"DateOfBirth"},{"id":3945042,"first_name":"FirstName","middle_name":"MiddleName","last_name":"LastName","date_of_birth":"DateOfBirth"},{"id":3945041,"first_name":"Patricia","middle_name":"Middle","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945040,"first_name":"Mary","middle_name":"Middle","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945039,"first_name":"Patricia","middle_name":"Middle","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945038,"first_name":"Mary","middle_name":"Middle","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945037,"first_name":"Patricia","middle_name":"Middle","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945036,"first_name":"Mary","middle_name":"Middle","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945035,"first_name":"Patricia","middle_name":"Middle","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945034,"first_name":"Mary","middle_name":"Middle","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945033,"first_name":"Patricia","middle_name":"Middle","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945032,"first_name":"Mary","middle_name":"Middle","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945031,"first_name":"Patricia","middle_name":"Middle2","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945030,"first_name":"Mary","middle_name":"Middle 1","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945029,"first_name":"Patricia","middle_name":"Middle2","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945028,"first_name":"Mary","middle_name":"Middle 1","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945027,"first_name":"Patricia","middle_name":"Middle2","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945026,"first_name":"Mary","middle_name":"Middle 1","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945025,"first_name":"Thomas","middle_name":"","last_name":"White","date_of_birth":"20/01/2010"},{"id":3945024,"first_name":"Joseph","middle_name":"Middle9","last_name":"Thompson","date_of_birth":"19/01/2010"},{"id":3945023,"first_name":"Charles","middle_name":"Middle8","last_name":"Jackson","date_of_birth":"18/01/2010"},{"id":3945022,"first_name":"Richard","middle_name":"Middle7","last_name":"Martin","date_of_birth":"17/01/2010"},{"id":3945021,"first_name":"David","middle_name":"Middle6","last_name":"Moore","date_of_birth":"16/01/2010"},{"id":3945020,"first_name":"William","middle_name":"Middle5","last_name":"Hernandez","date_of_birth":"15/01/2010"},{"id":3945019,"first_name":"Michael","middle_name":"Middle4","last_name":"Thomas","date_of_birth":"14/01/2010"},{"id":3945018,"first_name":"Robert","middle_name":"Middle3","last_name":"Taylor","date_of_birth":"13/01/2010"},{"id":3945017,"first_name":"John","middle_name":"Middle2","last_name":"Anderson","date_of_birth":"12/01/2010"},{"id":3945016,"first_name":"James","middle_name":"Middle1","last_name":"Martinez","date_of_birth":"11/01/2010"},{"id":3945015,"first_name":"Dorothy","middle_name":"","last_name":"Wilson","date_of_birth":"10/01/2010"},{"id":3945014,"first_name":"Margaret","middle_name":"Middle9","last_name":"Rodriguez","date_of_birth":"09/01/2010"},{"id":3945013,"first_name":"Susan","middle_name":"Middle8","last_name":"Garcia","date_of_birth":"08/01/2010"},{"id":3945012,"first_name":"Maria","middle_name":"Middle7","last_name":"Davis","date_of_birth":"07/01/2010"},{"id":3945011,"first_name":"Jennifer","middle_name":"Middle6","last_name":"Miller","date_of_birth":"06/01/2010"},{"id":3945010,"first_name":"Elizabeth","middle_name":"Middle5","last_name":"Jones","date_of_birth":"05/01/2010"},{"id":3945009,"first_name":"Barbara","middle_name":"Middle4","last_name":"Brown","date_of_birth":"04/01/2010"},{"id":3945008,"first_name":"Linda","middle_name":"Middle3","last_name":"Williams","date_of_birth":"03/01/2010"},{"id":3945007,"first_name":"Patricia","middle_name":"Middle2","last_name":"Johnson","date_of_birth":"02/01/2010"},{"id":3945006,"first_name":"Mary","middle_name":"Middle 1","last_name":"Smith","date_of_birth":"01/01/2010"},{"id":3945005,"first_name":"M","middle_name":"Rama","last_name":"Krishna","date_of_birth":"9-05-1998"},{"id":3945004,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":3945000,"first_name":"Pavindu","middle_name":"Shashith","last_name":"GPS","date_of_birth":"02 Sep 1995"},{"id":3944999,"first_name":"Pavindu","middle_name":"Shashith","last_name":"GPS","date_of_birth":"02 Sep 1995"},{"id":3944998,"first_name":"Pavindu","middle_name":"Shashith","last_name":"GPS","date_of_birth":"02 Sep 1995"},{"id":3944997,"first_name":"Pavindu","middle_name":"Shashith","last_name":"GPS","date_of_birth":"02 Sep 1995"},{"id":3944996,"first_name":"Pavindu","middle_name":"Shashith","last_name":"GPS","date_of_birth":"02 Sep 1995"},{"id":3944995,"first_name":"Pavindu","middle_name":"Shashith","last_name":"GPS","date_of_birth":"02 Sep 1995"},{"id":394499... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20221206 09:54:22.924" level="INFO">C:\Python310\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'thetestingworldapi.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20221206 09:54:22.925" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221206 09:54:21.118" endtime="20221206 09:54:22.925"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:22.925" endtime="20221206 09:54:22.926"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:22.927" endtime="20221206 09:54:22.942"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20221206 09:54:21.114" endtime="20221206 09:54:22.943"/>
+</test>
+<status status="PASS" starttime="20221206 09:54:20.894" endtime="20221206 09:54:22.945"/>
+</suite>
+<suite id="s1-s2" name="TC 002 Get Request on Specific Student" source="C:\Users\558\PycharmProjects\pythonProject1\TestCases\TC_002_Get_Request_on_Specific_Student.robot">
+<test id="s1-s2-t1" name="TC_002_Get_Request_Specific_Student" line="11">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>FetchData</arg>
+<arg>${Base_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221206 09:54:22.961" level="INFO">Creating Session using : alias=FetchData, url=http://thetestingworldapi.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221206 09:54:22.960" endtime="20221206 09:54:22.961"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${Response}</var>
+<arg>FetchData</arg>
+<arg>api/StudentsDetails/${Student_ID}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20221206 09:54:24.219" level="INFO">GET Request : url=http://thetestingworldapi.com/api/StudentsDetails/1 (redirected) 
+ path_url=/api/StudentsDetails/1 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20221206 09:54:24.219" level="INFO">GET Response : url=https://thetestingworldapi.com/api/StudentsDetails/1 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Server': 'Microsoft-IIS/8.5', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Tue, 06 Dec 2022 08:54:24 GMT', 'Content-Length': '40'} 
+ body={"status":"false","msg":"No data Found"} 
+ </msg>
+<msg timestamp="20221206 09:54:24.219" level="INFO">C:\Python310\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'thetestingworldapi.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20221206 09:54:24.220" level="INFO">${Response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221206 09:54:22.961" endtime="20221206 09:54:24.220"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${ActualCode}</var>
+<arg>${Response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221206 09:54:24.222" level="INFO">${ActualCode} = 200</msg>
+<status status="PASS" starttime="20221206 09:54:24.221" endtime="20221206 09:54:24.222"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${ActualCode}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:24.223" endtime="20221206 09:54:24.223"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:24.224" endtime="20221206 09:54:24.225"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:24.226" endtime="20221206 09:54:24.227"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Response.status_code}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221206 09:54:24.228" level="INFO">200</msg>
+<status status="PASS" starttime="20221206 09:54:24.228" endtime="20221206 09:54:24.228"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Response.content}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221206 09:54:24.229" level="INFO">{"status":"false","msg":"No data Found"}</msg>
+<status status="PASS" starttime="20221206 09:54:24.229" endtime="20221206 09:54:24.229"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20221206 09:54:22.959" endtime="20221206 09:54:24.230"/>
+</test>
+<status status="PASS" starttime="20221206 09:54:22.948" endtime="20221206 09:54:24.232"/>
+</suite>
+<suite id="s1-s3" name="TC 004 Get Request With Params" source="C:\Users\558\PycharmProjects\pythonProject1\TestCases\TC_004_Get_Request_With_Params.robot">
+<test id="s1-s3-t1" name="TC_004_Get_Request_With_Params" line="10">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>Get_Params</arg>
+<arg>${Base_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221206 09:54:24.243" level="INFO">Creating Session using : alias=Get_Params, url=https://reqres.in, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221206 09:54:24.243" endtime="20221206 09:54:24.243"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{param}</var>
+<arg>page=2</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221206 09:54:24.244" level="INFO">&amp;{param} = { page=2 }</msg>
+<status status="PASS" starttime="20221206 09:54:24.244" endtime="20221206 09:54:24.244"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>Get_Params</arg>
+<arg>/api/users</arg>
+<arg>params=&amp;{param}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20221206 09:54:24.379" level="INFO">GET Request : url=https://reqres.in/api/users?page=2 
+ path_url=/api/users?page=2 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20221206 09:54:24.379" level="INFO">GET Response : url=https://reqres.in/api/users?page=2 
+ status=200, reason=OK 
+ headers={'Date': 'Tue, 06 Dec 2022 08:54:25 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'X-Powered-By': 'Express', 'Access-Control-Allow-Origin': '*', 'Etag': 'W/"406-ut0vzoCuidvyMf8arZpMpJ6ZRDw"', 'Via': '1.1 vegur', 'Cache-Control': 'max-age=14400', 'CF-Cache-Status': 'HIT', 'Age': '7088', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=w1SiyfN4XbI71HYHcqeRQCMEaZiG3lm84Hi2V8K0fW3iDHwtoh90tOputMZjllAQeLzAAtiNPuxygCvOM5EvYNU7YOIRrDNfyDrt7h5gxjOBXX4TsR0XDit8Zg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Vary': 'Accept-Encoding', 'Server': 'cloudflare', 'CF-RAY': '7753cbf96b17c2c5-VIE', 'Content-Encoding': 'gzip'} 
+ body={"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} 
+ </msg>
+<msg timestamp="20221206 09:54:24.380" level="INFO">C:\Python310\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'reqres.in'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20221206 09:54:24.380" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221206 09:54:24.245" endtime="20221206 09:54:24.380"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${actual_status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221206 09:54:24.382" level="INFO">${actual_status_code} = 200</msg>
+<status status="PASS" starttime="20221206 09:54:24.381" endtime="20221206 09:54:24.382"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual_status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:24.382" endtime="20221206 09:54:24.383"/>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<var>${json_response}</var>
+<arg>${response.content}</arg>
+<doc>*DEPRECATED* Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</doc>
+<msg timestamp="20221206 09:54:24.383" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg timestamp="20221206 09:54:24.388" level="INFO">To JSON using : content={"page":2,"per_page":6,"total":12,"total_pages":2,"data":[{"id":7,"email":"michael.lawson@reqres.in","first_name":"Michael","last_name":"Lawson","avatar":"https://reqres.in/img/faces/7-image.jpg"},{"id":8,"email":"lindsay.ferguson@reqres.in","first_name":"Lindsay","last_name":"Ferguson","avatar":"https://reqres.in/img/faces/8-image.jpg"},{"id":9,"email":"tobias.funke@reqres.in","first_name":"Tobias","last_name":"Funke","avatar":"https://reqres.in/img/faces/9-image.jpg"},{"id":10,"email":"byron.fields@reqres.in","first_name":"Byron","last_name":"Fields","avatar":"https://reqres.in/img/faces/10-image.jpg"},{"id":11,"email":"george.edwards@reqres.in","first_name":"George","last_name":"Edwards","avatar":"https://reqres.in/img/faces/11-image.jpg"},{"id":12,"email":"rachel.howell@reqres.in","first_name":"Rachel","last_name":"Howell","avatar":"https://reqres.in/img/faces/12-image.jpg"}],"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}} </msg>
+<msg timestamp="20221206 09:54:24.388" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20221206 09:54:24.388" level="INFO">${json_response} = {'page': 2, 'per_page': 6, 'total': 12, 'total_pages': 2, 'data': [{'id': 7, 'email': 'michael.lawson@reqres.in', 'first_name': 'Michael', 'last_name': 'Lawson', 'avatar': 'https://reqres.in/img/faces...</msg>
+<status status="PASS" starttime="20221206 09:54:24.383" endtime="20221206 09:54:24.388"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>@{first_name_list}</var>
+<arg>${json_response}</arg>
+<arg>data[0].first_name</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20221206 09:54:24.419" level="INFO">@{first_name_list} = [ Michael ]</msg>
+<status status="PASS" starttime="20221206 09:54:24.389" endtime="20221206 09:54:24.419"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${first_name_user_1}</var>
+<arg>${first_name_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20221206 09:54:24.420" level="INFO">${first_name_user_1} = Michael</msg>
+<status status="PASS" starttime="20221206 09:54:24.420" endtime="20221206 09:54:24.420"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${first_name_user_1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:24.421" endtime="20221206 09:54:24.422"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${first_name_user_1}</arg>
+<arg>Michael</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:24.422" endtime="20221206 09:54:24.423"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>@{last_name_list}</var>
+<arg>${json_response}</arg>
+<arg>data[1].last_name</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20221206 09:54:24.446" level="INFO">@{last_name_list} = [ Ferguson ]</msg>
+<status status="PASS" starttime="20221206 09:54:24.423" endtime="20221206 09:54:24.446"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${last_name_user_2}</var>
+<arg>${last_name_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20221206 09:54:24.447" level="INFO">${last_name_user_2} = Ferguson</msg>
+<status status="PASS" starttime="20221206 09:54:24.447" endtime="20221206 09:54:24.447"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${last_name_user_2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:24.448" endtime="20221206 09:54:24.449"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${last_name_user_2}</arg>
+<arg>Ferguson</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:24.449" endtime="20221206 09:54:24.450"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>@{id_list}</var>
+<arg>${json_response}</arg>
+<arg>data[2].id</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20221206 09:54:24.478" level="INFO">@{id_list} = [ 9 ]</msg>
+<status status="PASS" starttime="20221206 09:54:24.451" endtime="20221206 09:54:24.478"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${id_user_3}</var>
+<arg>${id_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20221206 09:54:24.479" level="INFO">${id_user_3} = 9</msg>
+<status status="PASS" starttime="20221206 09:54:24.479" endtime="20221206 09:54:24.479"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${id_user_3}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:24.480" endtime="20221206 09:54:24.480"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${actual_id}</var>
+<arg>${id_user_3}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221206 09:54:24.481" level="INFO">${actual_id} = 9</msg>
+<status status="PASS" starttime="20221206 09:54:24.481" endtime="20221206 09:54:24.481"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual_id}</arg>
+<arg>9</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:24.482" endtime="20221206 09:54:24.482"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20221206 09:54:24.242" endtime="20221206 09:54:24.483"/>
+</test>
+<status status="PASS" starttime="20221206 09:54:24.234" endtime="20221206 09:54:24.485"/>
+</suite>
+<suite id="s1-s4" name="TC 005 Delete Request" source="C:\Users\558\PycharmProjects\pythonProject1\TestCases\TC_005_Delete_Request.robot">
+<test id="s1-s4-t1" name="TC_005_Delete_Request" line="10">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>Delete_Specific_Student</arg>
+<arg>${Base_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221206 09:54:24.496" level="INFO">Creating Session using : alias=Delete_Specific_Student, url=https://thetestingworldapi.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221206 09:54:24.496" endtime="20221206 09:54:24.496"/>
+</kw>
+<kw name="Delete Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>Delete_Specific_Student</arg>
+<arg>/api/studentsDetails/28</arg>
+<doc>*DEPRECATED* Please use `DELETE On Session` instead.</doc>
+<msg timestamp="20221206 09:54:24.497" level="WARN">Keyword 'RequestsLibrary.Delete Request' is deprecated. Please use `DELETE On Session` instead.</msg>
+<msg timestamp="20221206 09:54:25.288" level="INFO">DELETE Request : url=https://thetestingworldapi.com/api/studentsDetails/28 
+ path_url=/api/studentsDetails/28 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg timestamp="20221206 09:54:25.288" level="INFO">DELETE Response : url=https://thetestingworldapi.com/api/studentsDetails/28 
+ status=200, reason=OK 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Server': 'Microsoft-IIS/8.5', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Tue, 06 Dec 2022 08:54:26 GMT', 'Content-Length': '43'} 
+ body={"status":"false","msg":"record not found"} 
+ </msg>
+<msg timestamp="20221206 09:54:25.288" level="INFO">C:\Python310\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'thetestingworldapi.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20221206 09:54:25.289" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221206 09:54:24.497" endtime="20221206 09:54:25.289"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${actual_status_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221206 09:54:25.291" level="INFO">${actual_status_code} = 200</msg>
+<status status="PASS" starttime="20221206 09:54:25.290" endtime="20221206 09:54:25.291"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${actual_status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:25.292" endtime="20221206 09:54:25.292"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${actual_status_code}</arg>
+<arg>200</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:25.293" endtime="20221206 09:54:25.293"/>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<var>${json_response}</var>
+<arg>${response.content}</arg>
+<doc>*DEPRECATED* Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</doc>
+<msg timestamp="20221206 09:54:25.294" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg timestamp="20221206 09:54:25.296" level="INFO">To JSON using : content={"status":"false","msg":"record not found"} </msg>
+<msg timestamp="20221206 09:54:25.296" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20221206 09:54:25.296" level="INFO">${json_response} = {'status': 'false', 'msg': 'record not found'}</msg>
+<status status="PASS" starttime="20221206 09:54:25.294" endtime="20221206 09:54:25.296"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>@{status_list}</var>
+<arg>${json_response}</arg>
+<arg>status</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20221206 09:54:25.320" level="INFO">@{status_list} = [ false ]</msg>
+<status status="PASS" starttime="20221206 09:54:25.297" endtime="20221206 09:54:25.320"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>@{status_list}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:25.321" endtime="20221206 09:54:25.322"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${status_list[0]}</arg>
+<arg>false</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:25.322" endtime="20221206 09:54:25.323"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20221206 09:54:24.495" endtime="20221206 09:54:25.324"/>
+</test>
+<status status="PASS" starttime="20221206 09:54:24.488" endtime="20221206 09:54:25.326"/>
+</suite>
+<suite id="s1-s5" name="TC 006 Post Request" source="C:\Users\558\PycharmProjects\pythonProject1\TestCases\TC_006_Post_Request.robot">
+<test id="s1-s5-t1" name="TC_006_Post_Request" line="10">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>Add_New_Student</arg>
+<arg>${Base_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221206 09:54:25.335" level="INFO">Creating Session using : alias=Add_New_Student, url=https://thetestingworldapi.com/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221206 09:54:25.335" endtime="20221206 09:54:25.335"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{body}</var>
+<arg>first_name=TestName</arg>
+<arg>middle_name=A</arg>
+<arg>last_name=TestLName</arg>
+<arg>date_of_birth=12/12/1900</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221206 09:54:25.336" level="INFO">&amp;{body} = { first_name=TestName | middle_name=A | last_name=TestLName | date_of_birth=12/12/1900 }</msg>
+<status status="PASS" starttime="20221206 09:54:25.336" endtime="20221206 09:54:25.336"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>&amp;{header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221206 09:54:25.337" level="INFO">&amp;{header} = { Content-Type=application/json }</msg>
+<status status="PASS" starttime="20221206 09:54:25.337" endtime="20221206 09:54:25.337"/>
+</kw>
+<kw name="Post Request" library="RequestsLibrary">
+<var>${response}</var>
+<arg>Add_New_Student</arg>
+<arg>/api/studentsDetails</arg>
+<arg>data=&amp;{body}</arg>
+<arg>headers=&amp;{header}</arg>
+<doc>*DEPRECATED* Please use `POST On Session` instead.</doc>
+<msg timestamp="20221206 09:54:25.338" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20221206 09:54:26.107" level="INFO">POST Request : url=https://thetestingworldapi.com/api/studentsDetails 
+ path_url=/api/studentsDetails 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '103'} 
+ body={"first_name": "TestName", "middle_name": "A", "last_name": "TestLName", "date_of_birth": "12/12/1900"} 
+ </msg>
+<msg timestamp="20221206 09:54:26.107" level="INFO">POST Response : url=https://thetestingworldapi.com/api/studentsDetails 
+ status=201, reason=Created 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Location': 'https://thetestingworldapi.com/api/studentsDetails/3945088', 'Server': 'Microsoft-IIS/8.5', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Tue, 06 Dec 2022 08:54:26 GMT', 'Content-Length': '109'} 
+ body={"id":3945088,"first_name":"TestName","middle_name":"A","last_name":"TestLName","date_of_birth":"12/12/1900"} 
+ </msg>
+<msg timestamp="20221206 09:54:26.107" level="INFO">C:\Python310\lib\site-packages\urllib3\connectionpool.py:1043: InsecureRequestWarning: Unverified HTTPS request is being made to host 'thetestingworldapi.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20221206 09:54:26.108" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<status status="PASS" starttime="20221206 09:54:25.338" endtime="20221206 09:54:26.108"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:26.109" endtime="20221206 09:54:26.111"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${response_code}</var>
+<arg>${response.status_code}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20221206 09:54:26.112" level="INFO">${response_code} = 201</msg>
+<status status="PASS" starttime="20221206 09:54:26.111" endtime="20221206 09:54:26.112"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${response_code}</arg>
+<arg>201</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:26.113" endtime="20221206 09:54:26.113"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:26.114" endtime="20221206 09:54:26.115"/>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<var>${json_response}</var>
+<arg>${response.content}</arg>
+<doc>*DEPRECATED* Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</doc>
+<msg timestamp="20221206 09:54:26.116" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg timestamp="20221206 09:54:26.132" level="INFO">To JSON using : content={"id":3945088,"first_name":"TestName","middle_name":"A","last_name":"TestLName","date_of_birth":"12/12/1900"} </msg>
+<msg timestamp="20221206 09:54:26.132" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20221206 09:54:26.132" level="INFO">${json_response} = {'id': 3945088, 'first_name': 'TestName', 'middle_name': 'A', 'last_name': 'TestLName', 'date_of_birth': '12/12/1900'}</msg>
+<status status="PASS" starttime="20221206 09:54:26.116" endtime="20221206 09:54:26.132"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>@{first_name_list}</var>
+<arg>${json_response}</arg>
+<arg>first_name</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20221206 09:54:26.155" level="INFO">@{first_name_list} = [ TestName ]</msg>
+<status status="PASS" starttime="20221206 09:54:26.133" endtime="20221206 09:54:26.155"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${first_name}</var>
+<arg>${first_name_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20221206 09:54:26.156" level="INFO">${first_name} = TestName</msg>
+<status status="PASS" starttime="20221206 09:54:26.156" endtime="20221206 09:54:26.156"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${first_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:26.157" endtime="20221206 09:54:26.158"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${first_name}</arg>
+<arg>TestName</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:26.158" endtime="20221206 09:54:26.159"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>@{middle_name_list}</var>
+<arg>${json_response}</arg>
+<arg>middle_name</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20221206 09:54:26.182" level="INFO">@{middle_name_list} = [ A ]</msg>
+<status status="PASS" starttime="20221206 09:54:26.159" endtime="20221206 09:54:26.182"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${middle_name}</var>
+<arg>${middle_name_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20221206 09:54:26.184" level="INFO">${middle_name} = A</msg>
+<status status="PASS" starttime="20221206 09:54:26.183" endtime="20221206 09:54:26.184"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${middle_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:26.184" endtime="20221206 09:54:26.185"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${middle_name}</arg>
+<arg>A</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:26.186" endtime="20221206 09:54:26.186"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>@{last_name_list}</var>
+<arg>${json_response}</arg>
+<arg>last_name</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20221206 09:54:26.227" level="INFO">@{last_name_list} = [ TestLName ]</msg>
+<status status="PASS" starttime="20221206 09:54:26.187" endtime="20221206 09:54:26.227"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${last_name}</var>
+<arg>${last_name_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20221206 09:54:26.228" level="INFO">${last_name} = TestLName</msg>
+<status status="PASS" starttime="20221206 09:54:26.228" endtime="20221206 09:54:26.228"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${last_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:26.229" endtime="20221206 09:54:26.229"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${last_name}</arg>
+<arg>TestLName</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:26.230" endtime="20221206 09:54:26.231"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>@{dob_list}</var>
+<arg>${json_response}</arg>
+<arg>date_of_birth</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20221206 09:54:26.256" level="INFO">@{dob_list} = [ 12/12/1900 ]</msg>
+<status status="PASS" starttime="20221206 09:54:26.231" endtime="20221206 09:54:26.256"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${date_of_birth}</var>
+<arg>${dob_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20221206 09:54:26.257" level="INFO">${date_of_birth} = 12/12/1900</msg>
+<status status="PASS" starttime="20221206 09:54:26.256" endtime="20221206 09:54:26.257"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${date_of_birth}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221206 09:54:26.258" endtime="20221206 09:54:26.258"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${date_of_birth}</arg>
+<arg>12/12/1900</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20221206 09:54:26.259" endtime="20221206 09:54:26.259"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20221206 09:54:25.334" endtime="20221206 09:54:26.261"/>
+</test>
+<status status="PASS" starttime="20221206 09:54:25.328" endtime="20221206 09:54:26.263"/>
+</suite>
+<status status="PASS" starttime="20221206 09:54:20.867" endtime="20221206 09:54:26.266"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TC 001 Get Request">TestCases.TC 001 Get Request</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="TC 002 Get Request on Specific Student">TestCases.TC 002 Get Request on Specific Student</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="TC 004 Get Request With Params">TestCases.TC 004 Get Request With Params</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="TC 005 Delete Request">TestCases.TC 005 Delete Request</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="TC 006 Post Request">TestCases.TC 006 Post Request</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221206 09:54:24.383" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg timestamp="20221206 09:54:24.497" level="WARN">Keyword 'RequestsLibrary.Delete Request' is deprecated. Please use `DELETE On Session` instead.</msg>
+<msg timestamp="20221206 09:54:25.294" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+<msg timestamp="20221206 09:54:25.338" level="WARN">Keyword 'RequestsLibrary.Post Request' is deprecated. Please use `POST On Session` instead.</msg>
+<msg timestamp="20221206 09:54:26.116" level="WARN">Keyword 'RequestsLibrary.To Json' is deprecated. Please use ${resp.json()} instead. Have a look at the improved HTML output as pretty printing replacement.</msg>
+</errors>
+</robot>
