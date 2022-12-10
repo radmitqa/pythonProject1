@@ -1,4 +1,4 @@
-# pythonProject1
+# pythonProject1 - Non-functional API test sample
 
 Python project ROBOT Framework v.3.0
 
