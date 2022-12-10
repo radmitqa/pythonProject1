@@ -3,7 +3,7 @@
 Python project ROBOT Framework v.3.0
 
 To set up project you should have Python and Pycharm installed on your PC/Mac and clone.
-Execution commands are:
+Terminal execution commands are:
 
  - Run Smoke Tag Test Cases in Test Suite: robot -i Smoke .\TestCases\   
  - Run Test Suite: robot .\TestCases\   
